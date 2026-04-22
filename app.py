@@ -14,3 +14,6 @@ if menu == "Home":
 elif menu == "Halaman Data":
     judul()
     show_data()
+
+st.markdown("---")
+st.markdown("© 2026 Mulyana Nurhamida/184240027. All rights reserved.")
