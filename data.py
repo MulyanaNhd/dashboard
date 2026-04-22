@@ -11,8 +11,7 @@ def show_data():
     df = load_data()
     st.subheader("📌 Data Covid-19 di Indonesia")
     st.dataframe(df.head(10)) #menampilkan 10 data pertama
-
-#menampilkan statistik deskriptif dari dataset
-st.subheader("📈 Statistik Deskriptif Dataset")
-df = load_data()
-st.write(df.describe())
+    
+    #menampilkan statistik deskriptif dataset
+    st.subheader("📈 Statistik Deskriptif Dataset")
+    st.write(df.describe())
