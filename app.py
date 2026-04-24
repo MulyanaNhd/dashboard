@@ -11,6 +11,7 @@ menu = st.sidebar.radio("Pilih Halaman", ["Home", "Halaman Data"])
 
 if menu == "Home":
     judul()
+    kolom()
 elif menu == "Halaman Data":
     judul()
     show_data()
