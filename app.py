@@ -9,12 +9,25 @@ def judul():
 st.sidebar.title("Navigasi")
 menu = st.sidebar.radio("Pilih Halaman", ["Home", "Halaman Data"])
 
+#HALMAN HOME
 if menu == "Home":
     judul()
-    kolom()
+    #pilih tahun
+    year = select_year()
+
+    #Load & filter data
+    df = load_data()
+    df_filtered = filter_data(df, year)
+    kolom(df_filtered)
+    pie_chart(df_filtered)
+
 elif menu == "Halaman Data":
     judul()
-    show_data()
+    year = select_year()
+    #Load & filter data
+    df = load_data()
+    df_filtered = filter_data(df, year)
+    show_data(df_filtered)
 
 st.markdown("---")
 st.markdown("© 2026 Mulyana Nurhamida/184240027. All rights reserved.")
